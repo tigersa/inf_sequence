@@ -37,7 +37,7 @@ public class Main {
 	private static long findIndex(ArrayList<Byte> number) {
 		
 		for(int digit = 1; digit <= number.size(); digit++){
-			for(int start_index = 0; start_index < digit; start_index++){//выдел€ем из искомой последовательности часть цифр и считаем их числом
+			for(int start_index = 0; start_index <= number.size() - digit; start_index++){//выдел€ем из искомой последовательности часть цифр и считаем их числом
 				long index = try_to_find_sequence(number, digit, start_index);  //пытаемс€ найти слева числа на единицу меньше и справа на единицу больше пока последовательность не законичитс€ или число не будет найдено
 				if (index != -1){
 					return index;
